@@ -1,37 +1,25 @@
-/* Global Styles for Dark Theme, Fonts, Navbar, and Modern Layout */
-
-body, html {
-  margin: 0; /* Remove default margins causing "white border" */
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden; /* Prevent horizontal scrollbar */
-}
-
 .app-container {
   min-height: 100vh;
-  background-color: #0A0A0A; /* Deeper Dark background */
-  color: #E0E0E0; /* Softer light text color */
+  background-color: #121212; /* Dark background */
+  color: #ffffff; /* Light text color */
   font-family: 'Inter', sans-serif;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Ensure content stays within viewport */
 }
 
 .navbar {
-  background-color: #141414; /* Darker navbar background */
-  padding: 1.5rem 2rem; /* Increased padding */
+  background-color: #1e1e1e; /* Slightly lighter navbar background */
+  padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #282828; /* Deeper subtle border */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  border-bottom: 1px solid #2d2d2d; /* Subtle border */
 }
 
 .navbar-brand .logo {
-  font-size: 2rem; /* Larger logo */
-  font-weight: 800; /* Bolder logo font */
-  color: #64FFDA; /* Vibrant Teal logo color */
-  text-shadow: 0 0 5px rgba(100, 255, 218, 0.8); /* Glow effect for logo */
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff; /* Logo text color */
 }
 
 .navbar-links {
@@ -40,28 +28,27 @@ body, html {
 }
 
 .github-link {
-  color: #A0A0A0; /* Github link color */
+  color: #d4d4d4; /* Github link color */
   text-decoration: none;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+  font-weight: 500;
+  transition: color 0.2s ease-in-out;
 }
 
 .github-link:hover {
-  color: #FFFFFF; /* Link hover color */
-  background-color: #282828; /* Hover background */
+  color: #ffffff; /* Link hover color */
 }
 
 .main-content {
-  padding: 3rem 2rem; /* Increased main content padding */
-  flex: 1;
-  display: flex;
-  justify-content: center; /* Center content */
-  align-items: stretch; /* Stretch to full height */
+  padding: 2rem;
+  flex: 1; /* Allow main content to take up remaining space */
+  display: flex; /* Prepare for two-column layout inside */
+  justify-content: center; /* Center the code commenter card */
+  align-items: center;
 }
 
-/* Animation for smoother transitions and interactions */
-*, *::before, *::after {
-  transition: all 0.2s ease-in-out; /* Default transition for many properties */
+/* Basic reset for better consistency */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }

@@ -1,36 +1,34 @@
 .code-commenter-card {
-  background-color: #1E1E1E; /* Card background, slightly lighter than main background */
-  border-radius: 12px; /* More rounded corners */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5); /* Deeper shadow */
-  display: flex;
-  width: 98%; /* Almost full width */
-  max-width: 1600px; /* Increased max width */
-  min-height: 600px; /* Increased min height */
-  overflow: hidden; /* Clip corners nicely */
-  border: 1px solid #2D2D2D; /* Subtle border */
+  background-color: #1e1e1e; /* Card background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  display: flex; /* For two-panel layout */
+  width: 95%; /* Take most of the container width */
+  max-width: 1400px; /* Maximum width of the card */
+  min-height: 500px; /* Minimum height for layout to work well */
 }
 
 .input-panel {
-  flex: 1.2; /* Slightly wider input panel */
-  padding: 2rem; /* Increased padding */
-  border-right: 1px solid #2D2D2D; /* Deeper separator */
+  flex: 1; /* Input panel takes up available space */
+  padding: 1.5rem;
+  border-right: 1px solid #2d2d2d; /* Separator between panels */
   display: flex;
-  flex-direction: column;
-  min-width: 50%;
+  flex-direction: column; /* Stack input elements */
+  min-width: 40%; /* Minimum width for input panel */
 }
 
 .output-panel {
-  flex: 1;
-  padding: 2rem;
+  flex: 1; /* Output panel also takes up available space */
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  min-width: 40%;
+  min-width: 40%; /* Minimum width for output panel */
 }
 
 .input-area {
-  margin-bottom: 2rem; /* Increased bottom margin */
-  flex: 1;
-  min-height: 350px; /* Larger input area */
+  margin-bottom: 1.5rem;
+  flex: 1; /* Make textarea take available vertical space */
+  min-height: 300px; /* Ensure some initial height for textarea */
   display: flex;
   flex-direction: column;
 }
@@ -39,144 +37,103 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem; /* Increased control margin */
+  margin-bottom: 1rem;
 }
 
 .level-selector {
-  flex: 1;
-  margin-right: 1.5rem; /* Increased margin */
+  flex: 1; /* Take up available space, push button to the right */
+  margin-right: 1rem;
 }
 
 .output-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem; /* Increased output header margin */
+  margin-bottom: 1rem;
 }
 
 .label {
   display: block;
-  margin-bottom: 0.75rem;
-  font-weight: 600; /* Slightly bolder labels */
-  color: #DADADA; /* Lighter label color */
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #d4d4d4; /* Label color */
 }
 
 .textarea, .select {
   width: 100%;
-  padding: 1rem; /* Increased input padding */
-  border: 1px solid #444444;
-  border-radius: 8px; /* More rounded inputs */
-  background-color: #2D2D2D;
-  color: #F0F0F0; /* Lighter input text color */
+  padding: 0.75rem;
+  border: 1px solid #444444; /* Darker border */
+  border-radius: 4px;
+  background-color: #2d2d2d; /* Dark input background */
+  color: #ffffff; /* Input text color */
   font-family: monospace;
-  font-size: 15px; /* Slightly larger font size */
+  font-size: 14px;
   box-sizing: border-box;
   resize: vertical;
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.3); /* Inset shadow for depth */
 }
-
-.textarea:focus, .select:focus {
-  outline: none; /* Remove default focus outline */
-  border-color: #64FFDA; /* Teal focus border color */
-  box-shadow: 0 0 8px rgba(100, 255, 218, 0.5); /* Glow on focus */
-}
-
 
 .textarea {
-  min-height: 250px; /* Larger textarea height */
+  flex: 1; /* Make textarea grow in its container */
+  min-height: 200px; /* Give a starting size if flex doesn't fill */
 }
 
 .select {
-  height: 45px; /* Slightly taller select */
-  appearance: none;
+  height: 40px;
+  appearance: none; /* Remove default arrow in some browsers */
   -webkit-appearance: none;
   -moz-appearance: none;
   background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
   background-repeat: no-repeat;
-  background-position-x: 98%; /* Adjust arrow position */
-  background-position-y: center;
-  padding-right: 2.5rem; /* More space for arrow */
+  background-position-x: 100%;
+  background-position-y: 5px;
+  padding-right: 2rem; /* Make space for arrow icon */
 }
 
+
 .button {
-  padding: 1rem 2rem; /* Larger button padding */
+  padding: 0.75rem 1.5rem;
   border: none;
-  border-radius: 8px; /* More rounded buttons */
+  border-radius: 4px;
+  background-color: #007bff; /* Primary button color */
   color: white;
   cursor: pointer;
-  font-size: 1.1em; /* Larger font size */
-  font-weight: 600;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Button shadow */
-  transition: transform 0.2s ease, box-shadow 0.2s ease; /* Button interaction animations */
+  font-size: 1em;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .button:hover:enabled {
-  transform: translateY(-2px); /* Lift effect on hover */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.4); /* Increased shadow on hover */
-}
-
-.button:active:enabled {
-  transform: translateY(0); /* Press effect */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.3); /* Shadow when pressed */
+  background-color: #0056b3; /* Darker shade on hover */
 }
 
 .button:disabled {
-  background-color: #555555;
-  color: #B0B0B0;
+  background-color: #6c757d; /* Greyed out when disabled */
   cursor: not-allowed;
-  box-shadow: none;
-  transform: none;
 }
-
-/* Primary Button Style */
-.button.primary-button {
-  background-color: #64FFDA; /* Vibrant Teal Primary Button */
-  color: #141414; /* Dark text for primary button */
-}
-.button.primary-button:hover:enabled {
-  background-color: #42C3AA; /* Slightly darker teal on hover */
-}
-
-/* Secondary Button Style (e.g., Copy Button) */
-.button.secondary-button {
-  background-color: #3498DB; /* Vibrant Blue Secondary Button */
-  color: #F0F0F0;
-}
-.button.secondary-button:hover:enabled {
-  background-color: #217DBB; /* Slightly darker blue on hover */
-}
-
 
 .button.outline {
   background-color: transparent;
-  color: #64FFDA;
-  border: 2px solid #64FFDA; /* Thicker outline */
+  color: #007bff;
+  border: 1px solid #007bff;
 }
 
 .button.outline:hover:enabled {
-  background-color: #64FFDA;
-  color: #141414;
+  background-color: #007bff;
+  color: white;
 }
 
 .button.sm {
-  padding: 0.6rem 1.2rem;
-  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.9em;
 }
 
 .code-display {
-  background-color: #282828; /* Deeper code display background */
-  padding: 1.5rem; /* Increased code padding */
-  border: 1px solid #444444;
-  border-radius: 8px; /* Rounded code display */
-  overflow-x: auto;
-  font-size: 15px; /* Larger code font */
-  line-height: 1.6; /* Improved line spacing for code */
-  tab-size: 4; /* Standard tab size */
-  white-space: pre-wrap; /* Ensure long lines wrap */
+  background-color: #2d2d2d; /* Darker code display background */
+  padding: 1rem;
+  border: 1px solid #444444; /* Subtle border for code display */
+  overflow-x: auto; /* Allow horizontal scrolling for long code lines */
 }
 
 .error-message {
-  color: #FF775D; /* Vibrant error color */
-  margin-top: 0.75rem;
-  font-weight: 500;
+  color: #ff6b6b; /* Error message color */
+  margin-top: 0.5rem;
 }

@@ -27,7 +27,8 @@
               }
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "node_modules/prismjs/themes/prism-twilight.css"            
             ],
             "scripts": [],
             "server": "src/main.server.ts",
