@@ -1,34 +1,34 @@
 .code-commenter-card {
-  background-color: #1e1e1e; /* Card background */
+  background-color: #1e1e1e;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  display: flex; /* For two-panel layout */
-  width: 95%; /* Take most of the container width */
-  max-width: 1400px; /* Maximum width of the card */
-  min-height: 500px; /* Minimum height for layout to work well */
+  display: flex;
+  width: 95%;
+  max-width: 1400px;
+  min-height: 500px;
 }
 
 .input-panel {
-  flex: 1; /* Input panel takes up available space */
+  flex: 1;
   padding: 1.5rem;
-  border-right: 1px solid #2d2d2d; /* Separator between panels */
+  border-right: 1px solid #2d2d2d;
   display: flex;
-  flex-direction: column; /* Stack input elements */
-  min-width: 40%; /* Minimum width for input panel */
+  flex-direction: column;
+  min-width: 40%;
 }
 
 .output-panel {
-  flex: 1; /* Output panel also takes up available space */
+  flex: 1;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  min-width: 40%; /* Minimum width for output panel */
+  min-width: 40%;
 }
 
 .input-area {
   margin-bottom: 1.5rem;
-  flex: 1; /* Make textarea take available vertical space */
-  min-height: 300px; /* Ensure some initial height for textarea */
+  flex: 1;
+  min-height: 300px;
   display: flex;
   flex-direction: column;
 }
@@ -41,7 +41,7 @@
 }
 
 .level-selector {
-  flex: 1; /* Take up available space, push button to the right */
+  flex: 1;
   margin-right: 1rem;
 }
 
@@ -56,16 +56,17 @@
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;
-  color: #d4d4d4; /* Label color */
+  color: #d4d4d4;
 }
 
-.textarea, .select {
+.textarea,
+.select {
   width: 100%;
   padding: 0.75rem;
-  border: 1px solid #444444; /* Darker border */
+  border: 1px solid #444444;
   border-radius: 4px;
-  background-color: #2d2d2d; /* Dark input background */
-  color: #ffffff; /* Input text color */
+  background-color: #2d2d2d;
+  color: #ffffff;
   font-family: monospace;
   font-size: 14px;
   box-sizing: border-box;
@@ -73,28 +74,27 @@
 }
 
 .textarea {
-  flex: 1; /* Make textarea grow in its container */
-  min-height: 200px; /* Give a starting size if flex doesn't fill */
+  flex: 1;
+  min-height: 200px;
 }
 
 .select {
   height: 40px;
-  appearance: none; /* Remove default arrow in some browsers */
+  appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
   background-image: url('data:image/svg+xml;utf8,<svg fill="white" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
   background-repeat: no-repeat;
   background-position-x: 100%;
   background-position-y: 5px;
-  padding-right: 2rem; /* Make space for arrow icon */
+  padding-right: 2rem;
 }
-
 
 .button {
   padding: 0.75rem 1.5rem;
   border: none;
   border-radius: 4px;
-  background-color: #007bff; /* Primary button color */
+  background-color: #007bff;
   color: white;
   cursor: pointer;
   font-size: 1em;
@@ -102,11 +102,11 @@
 }
 
 .button:hover:enabled {
-  background-color: #0056b3; /* Darker shade on hover */
+  background-color: #0056b3;
 }
 
 .button:disabled {
-  background-color: #6c757d; /* Greyed out when disabled */
+  background-color: #6c757d;
   cursor: not-allowed;
 }
 
@@ -127,13 +127,13 @@
 }
 
 .code-display {
-  background-color: #2d2d2d; /* Darker code display background */
+  background-color: #2d2d2d;
   padding: 1rem;
-  border: 1px solid #444444; /* Subtle border for code display */
-  overflow-x: auto; /* Allow horizontal scrolling for long code lines */
+  border: 1px solid #444444;
+  overflow-x: auto;
 }
 
 .error-message {
-  color: #ff6b6b; /* Error message color */
+  color: #ff6b6b;
   margin-top: 0.5rem;
 }
