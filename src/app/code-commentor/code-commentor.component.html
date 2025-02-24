@@ -1,0 +1,45 @@
+<div class="code-commenter-card">
+  <div class="input-panel">
+      <div class="input-area">
+          <label for="code" class="label">Your Code</label>
+          <textarea id="code" placeholder="Paste your code here..." class="textarea" [(ngModel)]="code"
+              name="code"></textarea>
+      </div>
+      <div class="controls">
+          <div class="level-selector">
+              <label for="level" class="label">Comment Detail Level</label>
+              <select id="level" class="select" [(ngModel)]="level" name="level">
+                  <option value="1">Level 1 - Basic</option>
+                  <option value="2">Level 2 - Moderate</option>
+                  <option value="3">Level 3 - Detailed</option>
+                  <option value="4">Level 4 - Comprehensive</option>
+                  <option value="5">Level 5 - Extensive</option>
+              </select>
+          </div>
+          <button type="submit" class="button primary-button" (click)="handleSubmit()" [disabled]="isLoading">
+              <span *ngIf="isLoading">
+                  Generating...
+              </span>
+              <span *ngIf="!isLoading">
+                  Generate
+              </span>
+          </button>
+      </div>
+      <div *ngIf="errorMessage" class="error-message">
+          {{ errorMessage }}
+      </div>
+  </div>
+
+  <div class="output-panel">  <!-- Output panel ALWAYS visible -->
+      <div class="output-header">
+          <label class="label">Commented Code</label>
+          <button class="button secondary-button sm copy-button" (click)="copyToClipboard()" [disabled]="!result">
+              <span *ngIf="!copied">Copy</span>
+              <span *ngIf="copied">Copied!</span>
+          </button>
+      </div>
+      <div class="code-display rounded-lg overflow-hidden">
+          <markdown [data]="'```javascript\n' + result + '\n```'"></markdown>
+      </div>
+  </div>
+</div>

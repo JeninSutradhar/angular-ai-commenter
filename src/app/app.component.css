@@ -1,0 +1,67 @@
+/* Global Styles for Dark Theme, Fonts, Navbar, and Modern Layout */
+
+body, html {
+  margin: 0; /* Remove default margins causing "white border" */
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrollbar */
+}
+
+.app-container {
+  min-height: 100vh;
+  background-color: #0A0A0A; /* Deeper Dark background */
+  color: #E0E0E0; /* Softer light text color */
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* Ensure content stays within viewport */
+}
+
+.navbar {
+  background-color: #141414; /* Darker navbar background */
+  padding: 1.5rem 2rem; /* Increased padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #282828; /* Deeper subtle border */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.navbar-brand .logo {
+  font-size: 2rem; /* Larger logo */
+  font-weight: 800; /* Bolder logo font */
+  color: #64FFDA; /* Vibrant Teal logo color */
+  text-shadow: 0 0 5px rgba(100, 255, 218, 0.8); /* Glow effect for logo */
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.github-link {
+  color: #A0A0A0; /* Github link color */
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: color 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+}
+
+.github-link:hover {
+  color: #FFFFFF; /* Link hover color */
+  background-color: #282828; /* Hover background */
+}
+
+.main-content {
+  padding: 3rem 2rem; /* Increased main content padding */
+  flex: 1;
+  display: flex;
+  justify-content: center; /* Center content */
+  align-items: stretch; /* Stretch to full height */
+}
+
+/* Animation for smoother transitions and interactions */
+*, *::before, *::after {
+  transition: all 0.2s ease-in-out; /* Default transition for many properties */
+}

@@ -21,7 +21,11 @@
     "@angular/platform-server": "^19.1.0",
     "@angular/router": "^19.1.0",
     "@angular/ssr": "^19.1.7",
+    "clipboard": "^2.0.11",
     "express": "^4.18.2",
+    "highlight.js": "^11.11.1",
+    "markdown": "^0.5.0",
+    "ngx-markdown": "^19.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
